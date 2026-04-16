@@ -87,7 +87,7 @@ export default async function DashboardPage() {
       </div>
 
       {/* Stat cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+      <div className="stat-cards-grid">
         <BalanceCard
           label="Баланс"
           value={formatRub(stats.balance)}

@@ -5,7 +5,7 @@ export default function DashboardLoading() {
       <div className="h-3 w-28 rounded animate-pulse" style={{ background: 'var(--bg-elevated)' }} />
 
       {/* Stat cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+      <div className="stat-cards-grid">
         {[...Array(4)].map((_, i) => (
           <div
             key={i}
