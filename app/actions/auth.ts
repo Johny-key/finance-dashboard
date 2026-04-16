@@ -26,7 +26,7 @@ export async function signIn(
     if (error.message.includes('Email not confirmed')) {
       return { error: 'Подтвердите email перед входом' }
     }
-    return { error: 'Ошибка входа. Попробуйте ещё раз' }
+    return { error: `Ошибка входа: ${error.message}` }
   }
 
   revalidatePath('/', 'layout')
@@ -56,7 +56,7 @@ export async function signUp(
     if (error.message.includes('already registered') || error.message.includes('already exists')) {
       return { error: 'Пользователь с таким email уже существует' }
     }
-    return { error: 'Ошибка регистрации. Попробуйте ещё раз' }
+    return { error: `Ошибка регистрации: ${error.message}` }
   }
 
   revalidatePath('/', 'layout')
